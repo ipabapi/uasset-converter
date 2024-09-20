@@ -49,14 +49,14 @@ export function activate(context: vscode.ExtensionContext) {
     "UAssetCLITool.exe"
   ).fsPath;
   let disposable = vscode.commands.registerCommand(
-    "uasset-editor.touasset",
+    "uassetconverter.touasset",
     (uri: vscode.Uri) => {
       convert(uri.fsPath, false);
     }
   );
   context.subscriptions.push(disposable);
   let disposable2 = vscode.commands.registerCommand(
-    "uasset-editor.tojson",
+    "uassetconverter.tojson",
     (uri: vscode.Uri) => {
       convert(uri.fsPath, true);
     }

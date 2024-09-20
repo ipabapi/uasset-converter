@@ -1,9 +1,9 @@
 {
-  "name": "uasset-editor",
-  "displayName": "UAsset Editor",
-  "description": "",
+  "name": "uassetconverter",
+  "displayName": "UAsset Converter",
+  "description": "A VSCode Extension to convert UAssets to JSONs and back.",
   "repository": "https://github.com/ipabapi/uasset-converter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -15,17 +15,17 @@
   "contributes": {
     "commands": [
       {
-        "command": "uasset-editor.helloWorld",
+        "command": "uassetconverter.helloWorld",
         "title": "Hello World"
       },
       {
-        "command": "uasset-editor.tojson",
+        "command": "uassetconverter.tojson",
         "title": "Convert UAsset to JSON",
         "category": "7_modification",
         "icon": "$(timeline-refresh)"
       },
       {
-        "command": "uasset-editor.touasset",
+        "command": "uassetconverter.touasset",
         "title": "Convert JSON to UAsset",
         "category": "7_modification",
         "icon": "$(timeline-refresh)"
@@ -35,18 +35,18 @@
       "editor/title": [
         {
           "when": "resourceExtname == .json",
-          "command": "uasset-editor.touasset",
+          "command": "uassetconverter.touasset",
           "group": "navigation"
         }
       ],
       "explorer/context": [
         {
-          "command": "uasset-editor.tojson",
+          "command": "uassetconverter.tojson",
           "when": "resourceExtname == .uasset",
           "group": "7_modification"
         },
         {
-          "command": "uasset-editor.touasset",
+          "command": "uassetconverter.touasset",
           "when": "resourceExtname == .json",
           "group": "7_modification"
         }
