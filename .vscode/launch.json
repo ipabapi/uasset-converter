@@ -15,7 +15,7 @@
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "${defaultBuildTask}"
+			"preLaunchTask": "copyfiles -u 1 src/assets/**/* out/assets && ${defaultBuildTask}"
 		}
 	]
 }

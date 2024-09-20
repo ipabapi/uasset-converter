@@ -16,8 +16,41 @@
       {
         "command": "uasset-editor.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "uasset-editor.tojson",
+        "title": "Convert UAsset to JSON",
+        "category": "7_modification",
+        "icon": "$(timeline-refresh)"
+      },
+      {
+        "command": "uasset-editor.touasset",
+        "title": "Convert JSON to UAsset",
+        "category": "7_modification",
+        "icon": "$(timeline-refresh)"
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .json",
+          "command": "uasset-editor.touasset",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "uasset-editor.tojson",
+          "when": "resourceExtname == .uasset",
+          "group": "7_modification"
+        },
+        {
+          "command": "uasset-editor.touasset",
+          "when": "resourceExtname == .json",
+          "group": "7_modification"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -28,14 +61,14 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.93.0",
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
+    "@types/vscode": "^1.93.0",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
-    "eslint": "^9.9.1",
-    "typescript": "^5.5.4",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.9.1",
+    "typescript": "^5.5.4"
   }
 }
