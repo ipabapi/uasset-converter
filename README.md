@@ -1,71 +1,49 @@
-# uasset-editor README
+# UAsset Converter
 
-This is the README for your extension "uasset-editor". After writing up a brief description, we recommend including the following sections.
+This extension utilizes the UAssetAPI to convert UAsset files to JSON and back all from within Visual Studio Code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+This extension provides the following features:
+- Convert UAsset files to JSON
+- Convert JSON files to UAsset
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+You might need .NET 8.0 or higher to run the UAssetAPI. I am not sure if this is a requirement!
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+There are no settings for this extension at the moment.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This extension only works with UAssets that are from UE 4.27/28 due to the CLI arguments given to the UAssetAPI. This will be fixed in a future update as it is just a proof of concept and was for Shin Megami Tensei V: Vengeance modding.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of UAsset Converter
 
 ---
 
-## Following extension guidelines
+## Notes
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+I am not responsible for what is done with this extension. This was made for educational purposes and I prefer to make useful things open source if I can. I am not responsible for any damage done to your files or your computer, nor any companies knocking on your door for using this extension. Use at your own risk.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+I do not condone the use of this extension for malicious purposes. This was made for educational purposes and for the Shin Megami Tensei V: Vengeance modding community.
 
-## Working with Markdown
+Additionally, I do not allow the use of this extension for any harmful purposes including but not limited to: inflammatory statements, hate speech, or any other harmful content against any individual or group of individuals.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## To Do
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- [ ] Add the ability for users to select which version of UE the UAsset is from.
+- [ ] Add the ability to convert UAsset files to JSON and back in bulk (will require a revision of the CLI tool).
+- [ ] Add templates for said files to appear as when converted to JSON. (i.e. a spreadsheet like view for easier editing).
 
-## For more information
+## License
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+MIT
 
-**Enjoy!**
+

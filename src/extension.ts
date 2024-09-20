@@ -22,9 +22,18 @@ function convert(path: string, type: boolean) {
           console.error(`exec error: ${error}`);
         } else {
           vscode.window.showInformationMessage(`Conversion successful!`);
+		  if (type) {
+			vscode.workspace.openTextDocument(path.replace(".uasset", ".json")).then(doc => {
+				// Show the document and format it
+				vscode.window.showTextDocument(doc).then(editor => {
+					// execute format command
+					vscode.commands.executeCommand('editor.action.formatDocument');
+				})
+			})
         }
-      }
+      }}
     );
+
   } catch (error) {
     console.error(error);
   }
