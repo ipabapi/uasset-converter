@@ -2,6 +2,7 @@
   "name": "uasset-editor",
   "displayName": "UAsset Editor",
   "description": "",
+  "repository": "https://github.com/ipabapi/uasset-converter",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.93.0"
