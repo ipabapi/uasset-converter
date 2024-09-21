@@ -17,9 +17,6 @@ function convert(path: string, type: boolean) {
     exec(
       `${uassetCLIPath} ${type ? "-j" : "-u"} "${path}"`,
       (error, stdout, stderr) => {
-        console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
-
         if (error) {
           vscode.window.showErrorMessage(`An error occured: ${error}`);
           console.error(`exec error: ${error}`);

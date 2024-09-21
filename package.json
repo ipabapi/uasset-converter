@@ -2,6 +2,7 @@
   "name": "uassetconverter",
   "displayName": "UAsset Converter",
   "description": "A VSCode Extension to convert UAssets to JSONs and back.",
+  "author": "ipabapi",
   "repository": "https://github.com/ipabapi/uasset-converter",
   "version": "1.0.1",
   "engines": {
